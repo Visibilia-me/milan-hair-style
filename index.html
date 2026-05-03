@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Milan Hair Style — Milano</title>
-<meta name="description" content="Parrucchiere professionale a Milano. Taglio Personalizzato, corpo e benessere. 4.7★ su 190 recensioni Google.">
+<meta name="description" content="Parrucchiere professionale a Milano.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -61,7 +61,7 @@ a{text-decoration:none;color:inherit}
 
 /* ── HERO ── */
 .hero{min-height:100vh;padding-top:var(--nav-h);display:grid;grid-template-columns:1fr 1fr;overflow:hidden;background:var(--cream)}
-.hero-left{display:flex;flex-direction:column;justify-content:center;padding:64px 56px 64px 0}
+.hero-left{display:flex;flex-direction:column;justify-content:center;padding:64px 56px 64px calc((100vw - 1080px)/2 + 28px)}
 .hero-ornament{font-family:var(--font-title);font-size:120px;color:var(--gold-pale2);line-height:1;margin-bottom:-40px;margin-left:-8px;font-style:italic;user-select:none}
 .hero-tag{font-size:10px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
 .hero-title{font-family:var(--font-title);font-size:clamp(44px,5vw,72px);line-height:1.06;color:var(--dark);margin-bottom:24px;font-weight:400}
@@ -204,7 +204,7 @@ a{text-decoration:none;color:inherit}
   .section{padding:56px 0}
   .nav-links{display:none}
   .hero{grid-template-columns:1fr;min-height:auto}
-  .hero-left{padding:40px 0 32px}
+  .hero-left{padding:40px 28px 32px 28px}
   .hero-ornament{font-size:72px;margin-bottom:-24px}
   .hero-right{height:320px;margin:0 -28px}
   .hero-img-overlay{background:linear-gradient(to bottom,var(--cream) 0%,transparent 30%)}
@@ -246,10 +246,10 @@ a{text-decoration:none;color:inherit}
 <!-- HERO -->
 <section class="hero" id="home">
   <div class="hero-left container reveal">
-    <div class="hero-ornament">B</div>
+    <div class="hero-ornament">M</div>
     <div class="hero-tag">Parrucchiere · Milano</div>
-    <h1 class="hero-title">Il tuo stile, la nostra arte</h1>
-    <p class="hero-sub">A Milano, il salone dove la bellezza dei tuoi capelli prende forma con professionalità e passione.</p>
+    <h1 class="hero-title">La tua immagine al centro</h1>
+    <p class="hero-sub">Affidati alle mani esperte del nostro team per un look che esalti la tua bellezza naturale, nel cuore di Milano.</p>
     <div class="hero-ctas">
       <a href="tel:3295888800" class="btn btn-gold">📞 Prenota ora</a>
       <a href="https://wa.me/393295888800?text=Ciao,%20vorrei%20prenotare%20un%20trattamento" target="_blank" class="btn btn-outline">💬 WhatsApp</a>
@@ -290,12 +290,12 @@ a{text-decoration:none;color:inherit}
     <div class="services-header">
       <div class="tag reveal">I nostri trattamenti</div>
       <h2 class="h2 reveal">Bellezza autentica,<br><em>benessere reale</em></h2>
-      <p class="sub reveal" style="margin-top:14px">Ogni trattamento è personalizzato sulle tue esigenze, con prodotti selezionati e tecniche professionali aggiornate.</p>
+      <p class="sub reveal" style="margin-top:14px">Offriamo servizi professionali di parrucchiere a Milano. Ogni lavoro è eseguito a regola d'arte.</p>
     </div>
     <div class="services-grid">
       <div class="service-card reveal">
         <span class="service-emoji">✨</span>
-        <div class="service-name">Trattamenti viso</div>
+        <div class="service-name">Taglio e Styling Personalizzato</div>
         <div class="service-desc">Pulizia profonda, idratazione, anti-aging e trattamenti specifici per ogni tipo di pelle. Risultati visibili dalla prima seduta.</div>
       </div>
       <div class="service-card reveal" style="transition-delay:.06s">
@@ -305,22 +305,22 @@ a{text-decoration:none;color:inherit}
       </div>
       <div class="service-card reveal" style="transition-delay:.12s">
         <span class="service-emoji">💅</span>
-        <div class="service-name">Piega e Styling</div>
+        <div class="service-name">Trattamenti Specifici</div>
         <div class="service-desc">Cura completa di mani e piedi con smalti semipermanenti e gel. Ricostruzione unghie professionale.</div>
       </div>
       <div class="service-card reveal" style="transition-delay:.18s">
         <span class="service-emoji">🌸</span>
-        <div class="service-name">Trattamenti Capillari</div>
+        <div class="service-name">Mèches e Balayage</div>
         <div class="service-desc">Epilazione con cera, luce pulsata e filo. Risultati duraturi e trattamento delicato anche per le pelli più sensibili.</div>
       </div>
       <div class="service-card reveal" style="transition-delay:.24s">
         <span class="service-emoji">👁</span>
-        <div class="service-name">Acconciature Sposa/Eventi</div>
+        <div class="service-name">Acconciature Sposa ed Eventi</div>
         <div class="service-desc">Definizione e design sopracciglia, laminazione ciglia e trucco professionale per ogni occasione.</div>
       </div>
       <div class="service-card reveal" style="transition-delay:.30s">
         <span class="service-emoji">🧴</span>
-        <div class="service-name">Extension Capelli</div>
+        <div class="service-name">Extension di Qualità</div>
         <div class="service-desc">Scrub, fanghi, trattamenti snellenti e rassodanti. Programmi personalizzati per il tuo obiettivo.</div>
       </div>
     </div>
@@ -333,8 +333,8 @@ a{text-decoration:none;color:inherit}
     <div class="gallery-text">
       <div class="gallery-quote">"</div>
       <div class="tag reveal">Il nostro lavoro</div>
-      <h2 class="h2 reveal">Ogni risultato,<br><em>una storia</em></h2>
-      <p class="sub reveal">La cura che mettiamo in ogni trattamento si vede. Sfoglia i nostri lavori e lasciati ispirare.</p>
+      <h2 class="h2 reveal">Il meglio di Milan Hair Style</h2>
+      <p class="sub reveal">Ogni lavoro è realizzato con cura e professionalità a Milano.</p>
       <div class="reveal" style="transition-delay:.1s">
         <a href="tel:3295888800" class="btn btn-gold">📞 Prenota il tuo trattamento</a>
       </div>
@@ -362,8 +362,8 @@ a{text-decoration:none;color:inherit}
     </div>
     <div class="experience-text">
       <div class="tag reveal">Chi siamo</div>
-      <h2 class="h2 reveal">Un luogo dove<br><em>sentirti speciale</em></h2>
-      <p class="sub reveal">Girlfriends Beauty Boutique nasce dal desiderio di creare un posto dove ogni cliente si senta ascoltata, accudita e valorizzata. Non siamo solo un centro estetico — siamo il tuo momento per te.</p>
+      <h2 class="h2 reveal">Il Tuo Salone di Bellezza a Milano</h2>
+      <p class="sub reveal">Da Milan Hair Style, crediamo che ogni donna meriti un momento di pura bellezza e relax. Il nostro salone è un'oasi di stile nel cuore di Milano, dove la professionalità incontra l'accoglienza. Ci dedichiamo con passione a creare look unici che riflettano la tua personalità, utilizzando solo prodotti d'eccellenza. Vieni a scoprire l'arte dell'hairstyling in un ambiente curato e raffinato.</p>
       <div class="experience-points reveal" style="transition-delay:.1s">
         <div class="experience-point">
           <div class="experience-point-dot"></div>
@@ -416,7 +416,7 @@ a{text-decoration:none;color:inherit}
           <div class="review-date">2 settimane fa</div>
         </div>
         <p class="review-text">"Ambiente meraviglioso, staff gentilissimo e professionale. Ho fatto un trattamento viso e il risultato è stato sorprendente. Mi sono sentita coccolata dall'inizio alla fine."</p>
-        <div class="review-author">Anna M.</div>
+        <div class="review-author">Elena R.</div>
         <div class="review-city">Milano</div>
       </div>
       <div class="review-card reveal" style="transition-delay:.1s">
@@ -425,7 +425,7 @@ a{text-decoration:none;color:inherit}
           <div class="review-date">1 mese fa</div>
         </div>
         <p class="review-text">"Finalmente ho trovato il posto giusto! Manicure perfetta, ambiente curatissimo e un'attenzione al cliente davvero rara. Ci torno ogni mese senza pensarci due volte."</p>
-        <div class="review-author">Giulia P.</div>
+        <div class="review-author">Giulia B.</div>
         <div class="review-city">Milano</div>
       </div>
       <div class="review-card reveal" style="transition-delay:.2s">
@@ -434,7 +434,7 @@ a{text-decoration:none;color:inherit}
           <div class="review-date">2 mesi fa</div>
         </div>
         <p class="review-text">"Ho provato il massaggio decontratturante ed è stato incredibile. Personale preparatissimo che sa davvero ascoltare. Prezzi onesti per una qualità altissima. Consigliatissimo!"</p>
-        <div class="review-author">Sara L.</div>
+        <div class="review-author">Chiara M.</div>
         <div class="review-city">Milano</div>
       </div>
     </div>
@@ -446,8 +446,8 @@ a{text-decoration:none;color:inherit}
   <div class="container contacts-inner">
     <div class="contacts-left">
       <div class="tag reveal">Vieni a trovarci</div>
-      <h2 class="h2 reveal">Prenota il tuo<br><em>momento</em></h2>
-      <p class="sub reveal" style="margin-top:12px;margin-bottom:32px">Siamo qui per te. Prenota telefonicamente o su WhatsApp — risponderemo in poche ore.</p>
+      <h2 class="h2 reveal">Parliamo del<br>tuo progetto</h2>
+      <p class="sub reveal" style="margin-top:12px;margin-bottom:32px">Siamo qui per te a Milano. Contattaci per un preventivo gratuito — risponderemo in poche ore.</p>
       <div class="contact-list">
         <div class="contact-item reveal">
           <div class="contact-icon">📞</div>
@@ -494,7 +494,7 @@ a{text-decoration:none;color:inherit}
     <div class="footer-inner">
       <div>
         <div class="footer-logo"><em>Milan Hair Style</em></div>
-        <p class="footer-desc">Parrucchiere professionale a Milano. Trattamenti viso, corpo e benessere in un ambiente esclusivo.</p>
+        <p class="footer-desc">Milan Hair Style: la tua destinazione esclusiva per la bellezza dei capelli nel cuore di Milano.</p>
       </div>
       <div>
         <div class="footer-heading">Contatti</div>
@@ -507,16 +507,16 @@ a{text-decoration:none;color:inherit}
       <div>
         <div class="footer-heading">Trattamenti</div>
         <div class="footer-links">
-          <a href="#servizi">Viso</a>
-          <a href="#servizi">Massaggi</a>
-          <a href="#servizi">Manicure</a>
-          <a href="#servizi">Epilazione</a>
-          <a href="#servizi">Corpo</a>
+          <a href="#servizi">Taglio e Styling Personalizzato</a>
+          <a href="#servizi">Colorazione Professionale</a>
+          <a href="#servizi">Trattamenti Specifici</a>
+          <a href="#servizi">Mèches e Balayage</a>
+          <a href="#servizi">Acconciature Sposa ed Eventi</a>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <div class="footer-copy">© 2025 Milan Hair Style. Tutti i diritti riservati.</div>
+      <div class="footer-copy">© 2026 Milan Hair Style. Tutti i diritti riservati.</div>
       <div class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Cookie Policy</a></div>
     </div>
   </div>

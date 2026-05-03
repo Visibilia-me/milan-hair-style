@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Milan Hair Style — Milano</title>
+<meta name="description" content="Parrucchiere professionale a Milano. Taglio Personalizzato, corpo e benessere. 4.7★ su 190 recensioni Google.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --gold:#9B5E6E;
+  --gold-mid:#C4849A;
+  --gold-light:#777;
+  --gold-pale:#FDF0F3;
+  --gold-pale2:#F5EDD8;
+  --cream:#ffffff;
+  --warm:#F7F3EC;
+  --warm2:#EDE5D8;
+  --dark:#1A1410;
+  --dark2:#1c1c1c;
+  --text:#1A1410;
+  --text2:#5C4D3C;
+  --text3:#9C8C7C;
+  --white:#FFFFFF;
+  --radius:10px;
+  --radius2:20px;
+  --shadow:0 2px 24px rgba(26,20,16,0.07);
+  --shadow2:0 16px 56px rgba(26,20,16,0.12);
+  --font-title:'Cormorant Garamond',Georgia,serif;
+  --font-body:'DM Sans',sans-serif;
+  --nav-h:68px;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);color:var(--text);background:var(--cream);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{display:block;width:100%;height:100%;object-fit:cover;font-size:0;color:transparent}
+a{text-decoration:none;color:inherit}
+
+/* ── UTILITY ── */
+.container{max-width:1080px;margin:0 auto;padding:0 28px}
+.section{padding:96px 0}
+.tag{font-size:10px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+.h2{font-family:var(--font-title);font-size:clamp(36px,4.5vw,56px);line-height:1.1;color:var(--text);font-weight:400}
+.h2 em{color:var(--gold);font-style:italic}
+.sub{font-size:16px;color:var(--text2);line-height:1.8;font-weight:300}
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:none}
+
+/* ── NAV ── */
+.nav{position:fixed;top:0;left:0;right:0;z-index:999;height:var(--nav-h);background:rgba(253,252,249,0.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--warm2);transition:box-shadow .3s}
+.nav.scrolled{box-shadow:0 2px 20px rgba(26,20,16,0.06)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:100%}
+.nav-logo{font-family:var(--font-title);font-size:22px;color:var(--dark);font-weight:400;letter-spacing:.5px}
+.nav-logo em{color:var(--gold);font-style:italic}
+.nav-links{display:flex;gap:36px}
+.nav-links a{font-size:13px;font-weight:500;color:var(--text2);letter-spacing:.5px;transition:color .2s}
+.nav-links a:hover{color:var(--gold)}
+.nav-cta{background:var(--gold);color:var(--white);font-family:var(--font-body);font-size:13px;font-weight:600;padding:10px 22px;border-radius:100px;border:none;cursor:pointer;transition:all .2s;letter-spacing:.5px}
+.nav-cta:hover{background:var(--dark);transform:translateY(-1px)}
+
+/* ── HERO ── */
+.hero{min-height:100vh;padding-top:var(--nav-h);display:grid;grid-template-columns:1fr 1fr;overflow:hidden;background:var(--cream)}
+.hero-left{display:flex;flex-direction:column;justify-content:center;padding:64px 56px 64px 0}
+.hero-ornament{font-family:var(--font-title);font-size:120px;color:var(--gold-pale2);line-height:1;margin-bottom:-40px;margin-left:-8px;font-style:italic;user-select:none}
+.hero-tag{font-size:10px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
+.hero-title{font-family:var(--font-title);font-size:clamp(44px,5vw,72px);line-height:1.06;color:var(--dark);margin-bottom:24px;font-weight:400}
+.hero-title em{color:var(--gold);font-style:italic}
+.hero-sub{font-size:17px;color:var(--text2);line-height:1.78;font-weight:300;margin-bottom:40px;max-width:420px}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:48px}
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-body);font-size:14px;font-weight:600;padding:13px 28px;border-radius:100px;border:none;cursor:pointer;transition:all .22s;letter-spacing:.3px}
+.btn-gold{background:var(--gold);color:var(--white)}
+.btn-gold:hover{background:var(--dark);transform:translateY(-2px)}
+.btn-outline{background:transparent;color:var(--gold);border:1.5px solid var(--gold)}
+.btn-outline:hover{background:var(--gold-pale)}
+.hero-trust{display:flex;align-items:center;gap:16px;padding:16px 20px;background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);width:fit-content;border:1px solid var(--warm2)}
+.hero-trust-stars{font-size:15px;color:var(--gold);letter-spacing:2px}
+.hero-trust-text{font-size:13px;color:var(--text2)}
+.hero-trust-text strong{display:block;font-size:15px;font-weight:600;color:var(--dark)}
+.hero-right{position:relative;overflow:hidden}
+.hero-img{position:absolute;inset:0}
+.hero-img img{object-position:center top}
+.hero-img-overlay{position:absolute;inset:0;background:linear-gradient(to right,var(--cream) 0%,transparent 20%)}
+.hero-deco{position:absolute;bottom:40px;left:32px;background:var(--white);border-radius:var(--radius);padding:16px 20px;box-shadow:var(--shadow2);border:1px solid var(--warm2)}
+.hero-deco-num{font-family:var(--font-title);font-size:32px;color:var(--gold);line-height:1}
+.hero-deco-text{font-size:11px;color:var(--text3);font-weight:500;text-transform:uppercase;letter-spacing:1px;margin-top:2px}
+
+/* ── STRIP ── */
+.strip{background:var(--gold-pale2);border-top:1px solid var(--gold-light);border-bottom:1px solid var(--gold-light);padding:0}
+.strip-inner{display:flex;justify-content:center;align-items:center}
+.strip-item{display:flex;align-items:center;gap:10px;padding:22px 36px;border-right:1px solid var(--gold-light)}
+.strip-item:last-child{border-right:none}
+.strip-num{font-family:var(--font-title);font-size:26px;color:var(--gold);line-height:1}
+.strip-lbl{font-size:12px;color:var(--text2);font-weight:400;text-transform:uppercase;letter-spacing:.5px}
+
+/* ── SERVIZI ── */
+.services{background:var(--white)}
+.services-header{text-align:center;max-width:560px;margin:0 auto 56px}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.service-card{background:var(--warm);border-radius:var(--radius2);padding:32px 24px;text-align:center;transition:all .25s;border:1px solid transparent;position:relative;overflow:hidden}
+.service-card::before{content:'';position:absolute;top:0;left:50%;right:50%;height:2px;background:var(--gold);transition:all .3s}
+.service-card:hover{background:var(--white);border-color:var(--gold-light);box-shadow:var(--shadow2);transform:translateY(-4px)}
+.service-card:hover::before{left:0;right:0}
+.service-emoji{font-size:28px;margin-bottom:16px;display:block}
+.service-name{font-family:var(--font-title);font-size:20px;font-weight:500;color:var(--dark);margin-bottom:10px}
+.service-desc{font-size:14px;color:var(--text2);line-height:1.65}
+
+/* ── GALLERIA ── */
+.gallery{background:var(--warm)}
+.gallery-inner{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.gallery-text{padding:88px 64px 88px 0;display:flex;flex-direction:column;justify-content:center}
+.gallery-quote{font-family:var(--font-title);font-size:72px;color:var(--gold-light);line-height:1;margin-bottom:-16px;font-style:italic}
+.gallery-text .tag{margin-top:8px}
+.gallery-text .h2{margin-bottom:16px}
+.gallery-text .sub{margin-bottom:32px}
+.gallery-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:40px 0 40px 40px}
+.gallery-item{border-radius:var(--radius);overflow:hidden;background:var(--warm2)}
+.gallery-item:first-child{grid-column:span 2;aspect-ratio:16/7}
+.gallery-item:not(:first-child){aspect-ratio:1}
+.gallery-item img{transition:transform .5s ease}
+.gallery-item:hover img{transform:scale(1.05)}
+
+/* ── EXPERIENCE ── */
+.experience{background:var(--dark2);padding:96px 0}
+.experience-inner{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.experience-visual{position:relative}
+.experience-img{border-radius:var(--radius2);overflow:hidden;aspect-ratio:3/4;background:var(--dark)}
+.experience-badge{position:absolute;bottom:-20px;right:-20px;background:var(--gold);border-radius:var(--radius);padding:20px 24px;text-align:center;box-shadow:var(--shadow2)}
+.experience-badge-num{font-family:var(--font-title);font-size:40px;color:var(--white);line-height:1}
+.experience-badge-text{font-size:11px;color:rgba(255,255,255,.85);font-weight:500;text-transform:uppercase;letter-spacing:1px}
+.experience-text .tag{color:var(--gold-mid)}
+.experience-text .h2{color:var(--white)}
+.experience-text .h2 em{color:var(--gold-mid)}
+.experience-text .sub{color:rgba(255,255,255,.55);margin-top:16px;margin-bottom:36px}
+.experience-points{display:flex;flex-direction:column;gap:12px}
+.experience-point{display:flex;align-items:flex-start;gap:14px;padding:14px 18px;background:rgba(255,255,255,.04);border-radius:var(--radius);border:1px solid rgba(184,150,90,.15)}
+.experience-point-dot{width:6px;height:6px;border-radius:50%;background:var(--gold);flex-shrink:0;margin-top:6px}
+.experience-point-title{font-size:14px;font-weight:600;color:var(--white);margin-bottom:3px}
+.experience-point-desc{font-size:13px;color:rgba(255,255,255,.45);line-height:1.5}
+
+/* ── RECENSIONI ── */
+.reviews{background:var(--cream)}
+.reviews-header{text-align:center;margin-bottom:48px}
+.reviews-score{display:inline-flex;align-items:center;gap:16px;background:var(--white);border:1px solid var(--warm2);padding:14px 24px;border-radius:100px;box-shadow:var(--shadow);margin-top:20px}
+.reviews-score-stars{font-size:16px;color:var(--gold);letter-spacing:2px}
+.reviews-score-text{font-size:14px;color:var(--text2)}
+.reviews-score-text strong{color:var(--dark);font-weight:600}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.review-card{background:var(--white);border-radius:var(--radius2);padding:28px;border:1px solid var(--warm2)}
+.review-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:16px}
+.review-stars{font-size:13px;color:var(--gold);letter-spacing:2px}
+.review-date{font-size:12px;color:var(--text3)}
+.review-text{font-family:var(--font-title);font-size:16px;color:var(--text);line-height:1.7;margin-bottom:16px;font-style:italic;font-weight:400}
+.review-author{font-size:13px;font-weight:600;color:var(--dark)}
+.review-city{font-size:12px;color:var(--text3);margin-top:2px}
+
+/* ── CONTATTI ── */
+.contacts{background:var(--white)}
+.contacts-inner{display:grid;grid-template-columns:1fr 1.4fr;gap:64px;align-items:start}
+.contacts-left .tag{margin-bottom:12px}
+.contacts-left .h2{margin-bottom:8px}
+.contacts-left .sub{margin-bottom:36px}
+.contact-list{display:flex;flex-direction:column;gap:0}
+.contact-item{display:flex;align-items:flex-start;gap:16px;padding:18px 0;border-bottom:1px solid var(--warm2)}
+.contact-item:last-child{border-bottom:none}
+.contact-icon{width:40px;height:40px;background:var(--gold-pale);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.contact-label{font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--text3);margin-bottom:4px}
+.contact-value{font-size:15px;font-weight:500;color:var(--dark)}
+.contact-value a{color:var(--gold)}
+.contact-value.soft{font-size:14px;color:var(--text2);font-weight:300;line-height:1.8}
+.contacts-map{border-radius:var(--radius2);overflow:hidden;height:420px;background:var(--warm);box-shadow:var(--shadow)}
+.contacts-map iframe{width:100%;height:100%;border:none}
+.contacts-cta{margin-top:28px}
+
+/* ── FOOTER ── */
+.footer{background:var(--dark);padding:56px 0 24px}
+.footer-inner{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:48px;margin-bottom:40px}
+.footer-logo{font-family:var(--font-title);font-size:24px;color:var(--white);margin-bottom:10px;font-weight:400}
+.footer-logo em{color:var(--gold-mid);font-style:italic}
+.footer-desc{font-size:14px;color:rgba(255,255,255,.38);line-height:1.7}
+.footer-heading{font-size:10px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.28);margin-bottom:16px}
+.footer-links{display:flex;flex-direction:column;gap:10px}
+.footer-links a{font-size:14px;color:rgba(255,255,255,.48);transition:color .2s}
+.footer-links a:hover{color:var(--white)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.07);padding-top:24px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.footer-copy{font-size:13px;color:rgba(255,255,255,.25)}
+.footer-legal{display:flex;gap:20px}
+.footer-legal a{font-size:13px;color:rgba(255,255,255,.25);transition:color .2s}
+.footer-legal a:hover{color:rgba(255,255,255,.5)}
+
+/* ── MOBILE BAR ── */
+.mobile-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:998;background:var(--white);border-top:1px solid var(--warm2);padding:10px 16px;gap:10px}
+.mobile-bar a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:13px;border-radius:100px;font-size:14px;font-weight:600}
+.mobile-bar-call{background:var(--gold);color:var(--white)}
+.mobile-bar-wa{background:#25D366;color:var(--white)}
+
+/* ── COOKIE ── */
+.cookie{position:fixed;bottom:0;left:0;right:0;z-index:1000;background:var(--dark);color:rgba(255,255,255,.7);padding:16px 28px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-size:13px;transform:translateY(100%);transition:transform .4s ease}
+.cookie.show{transform:none}
+.cookie-btn{background:var(--gold);color:white;border:none;border-radius:100px;padding:8px 22px;font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap}
+
+/* ── MOBILE ── */
+@media(max-width:768px){
+  .section{padding:56px 0}
+  .nav-links{display:none}
+  .hero{grid-template-columns:1fr;min-height:auto}
+  .hero-left{padding:40px 0 32px}
+  .hero-ornament{font-size:72px;margin-bottom:-24px}
+  .hero-right{height:320px;margin:0 -28px}
+  .hero-img-overlay{background:linear-gradient(to bottom,var(--cream) 0%,transparent 30%)}
+  .strip-inner{flex-wrap:wrap}
+  .strip-item{padding:14px 20px;border-right:none;border-bottom:1px solid var(--gold-light);width:50%}
+  .strip-item:nth-child(odd){border-right:1px solid var(--gold-light)}
+  .strip-item:nth-child(3),.strip-item:nth-child(4){border-bottom:none}
+  .services-grid{grid-template-columns:1fr}
+  .gallery-inner{grid-template-columns:1fr}
+  .gallery-text{padding:56px 0 0}
+  .gallery-grid{padding:24px 0 0}
+  .experience-inner{grid-template-columns:1fr}
+  .experience-visual{display:none}
+  .reviews-grid{grid-template-columns:1fr}
+  .contacts-inner{grid-template-columns:1fr}
+  .contacts-map{height:260px}
+  .footer-inner{grid-template-columns:1fr}
+  .mobile-bar{display:flex}
+  body{padding-bottom:72px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="#" class="nav-logo"><em>Milan Hair Style</em></a>
+    <div class="nav-links">
+      <a href="#servizi">Trattamenti</a>
+      <a href="#lavori">Gallery</a>
+      <a href="#recensioni">Recensioni</a>
+      <a href="#contatti">Contatti</a>
+    </div>
+    <a href="tel:3295888800" class="nav-cta">📞 Prenota ora</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-left container reveal">
+    <div class="hero-ornament">B</div>
+    <div class="hero-tag">Parrucchiere · Milano</div>
+    <h1 class="hero-title">Il tuo stile, la nostra arte</h1>
+    <p class="hero-sub">A Milano, il salone dove la bellezza dei tuoi capelli prende forma con professionalità e passione.</p>
+    <div class="hero-ctas">
+      <a href="tel:3295888800" class="btn btn-gold">📞 Prenota ora</a>
+      <a href="https://wa.me/393295888800?text=Ciao,%20vorrei%20prenotare%20un%20trattamento" target="_blank" class="btn btn-outline">💬 WhatsApp</a>
+    </div>
+    <div class="hero-trust">
+      <div class="hero-trust-stars">★★★★★</div>
+      <div class="hero-trust-text">
+        <strong>4.9 su 190 recensioni</strong>
+        Verificate su Google
+      </div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-img">
+      <img src="foto/foto1.jpg" alt="" onerror="this.style.opacity=0;this.parentElement.style.background='linear-gradient(160deg,#F5EDD8,#EDE5D8)'">
+    </div>
+    <div class="hero-img-overlay"></div>
+    <div class="hero-deco">
+      <div class="hero-deco-num">190</div>
+      <div class="hero-deco-text">clienti soddisfatte</div>
+    </div>
+  </div>
+</section>
+
+<!-- STRIP -->
+<div class="strip">
+  <div class="container strip-inner">
+    <div class="strip-item reveal"><div><div class="strip-num">4.9★</div><div class="strip-lbl">Google</div></div></div>
+    <div class="strip-item reveal" style="transition-delay:.08s"><div><div class="strip-num">190</div><div class="strip-lbl">Recensioni</div></div></div>
+    <div class="strip-item reveal" style="transition-delay:.16s"><div><div class="strip-num">10+</div><div class="strip-lbl">Anni esperienza</div></div></div>
+    <div class="strip-item reveal" style="transition-delay:.24s"><div><div class="strip-num">500+</div><div class="strip-lbl">Clienti felici</div></div></div>
+  </div>
+</div>
+
+<!-- SERVIZI -->
+<section class="section services" id="servizi">
+  <div class="container">
+    <div class="services-header">
+      <div class="tag reveal">I nostri trattamenti</div>
+      <h2 class="h2 reveal">Bellezza autentica,<br><em>benessere reale</em></h2>
+      <p class="sub reveal" style="margin-top:14px">Ogni trattamento è personalizzato sulle tue esigenze, con prodotti selezionati e tecniche professionali aggiornate.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <span class="service-emoji">✨</span>
+        <div class="service-name">Trattamenti viso</div>
+        <div class="service-desc">Pulizia profonda, idratazione, anti-aging e trattamenti specifici per ogni tipo di pelle. Risultati visibili dalla prima seduta.</div>
+      </div>
+      <div class="service-card reveal" style="transition-delay:.06s">
+        <span class="service-emoji">💆</span>
+        <div class="service-name">Colorazione Professionale</div>
+        <div class="service-desc">Massaggio rilassante, decontratturante e drenante. Un momento di puro benessere per corpo e mente.</div>
+      </div>
+      <div class="service-card reveal" style="transition-delay:.12s">
+        <span class="service-emoji">💅</span>
+        <div class="service-name">Piega e Styling</div>
+        <div class="service-desc">Cura completa di mani e piedi con smalti semipermanenti e gel. Ricostruzione unghie professionale.</div>
+      </div>
+      <div class="service-card reveal" style="transition-delay:.18s">
+        <span class="service-emoji">🌸</span>
+        <div class="service-name">Trattamenti Capillari</div>
+        <div class="service-desc">Epilazione con cera, luce pulsata e filo. Risultati duraturi e trattamento delicato anche per le pelli più sensibili.</div>
+      </div>
+      <div class="service-card reveal" style="transition-delay:.24s">
+        <span class="service-emoji">👁</span>
+        <div class="service-name">Acconciature Sposa/Eventi</div>
+        <div class="service-desc">Definizione e design sopracciglia, laminazione ciglia e trucco professionale per ogni occasione.</div>
+      </div>
+      <div class="service-card reveal" style="transition-delay:.30s">
+        <span class="service-emoji">🧴</span>
+        <div class="service-name">Extension Capelli</div>
+        <div class="service-desc">Scrub, fanghi, trattamenti snellenti e rassodanti. Programmi personalizzati per il tuo obiettivo.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERIA -->
+<section class="gallery" id="lavori">
+  <div class="container gallery-inner">
+    <div class="gallery-text">
+      <div class="gallery-quote">"</div>
+      <div class="tag reveal">Il nostro lavoro</div>
+      <h2 class="h2 reveal">Ogni risultato,<br><em>una storia</em></h2>
+      <p class="sub reveal">La cura che mettiamo in ogni trattamento si vede. Sfoglia i nostri lavori e lasciati ispirare.</p>
+      <div class="reveal" style="transition-delay:.1s">
+        <a href="tel:3295888800" class="btn btn-gold">📞 Prenota il tuo trattamento</a>
+      </div>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item reveal"><img src="foto/foto1.jpg" alt="" onerror="this.style.background='#EDE5D8'"></div>
+      <div class="gallery-item reveal" style="transition-delay:.06s"><img src="foto/foto2.jpg" alt="" onerror="this.style.background='#E8D5B0'"></div>
+      <div class="gallery-item reveal" style="transition-delay:.12s"><img src="foto/foto3.jpg" alt="" onerror="this.style.background='#FAF5EC'"></div>
+      <div class="gallery-item reveal" style="transition-delay:.18s"><img src="foto/foto4.jpg" alt="" onerror="this.style.background='#EDE5D8'"></div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="experience" id="chi-siamo">
+  <div class="container experience-inner">
+    <div class="experience-visual reveal">
+      <div class="experience-img">
+        <img src="foto/foto2.jpg" alt="" onerror="this.parentElement.style.background='#2C2318'">
+      </div>
+      <div class="experience-badge">
+        <div class="experience-badge-num">10+</div>
+        <div class="experience-badge-text">anni di cura</div>
+      </div>
+    </div>
+    <div class="experience-text">
+      <div class="tag reveal">Chi siamo</div>
+      <h2 class="h2 reveal">Un luogo dove<br><em>sentirti speciale</em></h2>
+      <p class="sub reveal">Girlfriends Beauty Boutique nasce dal desiderio di creare un posto dove ogni cliente si senta ascoltata, accudita e valorizzata. Non siamo solo un centro estetico — siamo il tuo momento per te.</p>
+      <div class="experience-points reveal" style="transition-delay:.1s">
+        <div class="experience-point">
+          <div class="experience-point-dot"></div>
+          <div>
+            <div class="experience-point-title">Consulenza personalizzata</div>
+            <div class="experience-point-desc">Ogni trattamento inizia con un'analisi delle tue esigenze specifiche</div>
+          </div>
+        </div>
+        <div class="experience-point">
+          <div class="experience-point-dot"></div>
+          <div>
+            <div class="experience-point-title">Prodotti selezionati</div>
+            <div class="experience-point-desc">Solo linee professionali certificate, sicure e testate dermatologicamente</div>
+          </div>
+        </div>
+        <div class="experience-point">
+          <div class="experience-point-dot"></div>
+          <div>
+            <div class="experience-point-title">Ambiente esclusivo</div>
+            <div class="experience-point-desc">Un'atmosfera curata in ogni dettaglio per la tua totale tranquillità</div>
+          </div>
+        </div>
+        <div class="experience-point">
+          <div class="experience-point-dot"></div>
+          <div>
+            <div class="experience-point-title">Formazione continua</div>
+            <div class="experience-point-desc">Il nostro team si aggiorna costantemente sulle ultime tecniche</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RECENSIONI -->
+<section class="section reviews" id="recensioni">
+  <div class="container">
+    <div class="reviews-header">
+      <div class="tag reveal">Cosa dicono di noi</div>
+      <h2 class="h2 reveal">Le nostre <em>clienti</em></h2>
+      <div class="reviews-score reveal">
+        <div class="reviews-score-stars">★★★★★</div>
+        <div class="reviews-score-text"><strong>4.7</strong> su 190 recensioni Google</div>
+      </div>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card reveal">
+        <div class="review-top">
+          <div class="review-stars">★★★★★</div>
+          <div class="review-date">2 settimane fa</div>
+        </div>
+        <p class="review-text">"Ambiente meraviglioso, staff gentilissimo e professionale. Ho fatto un trattamento viso e il risultato è stato sorprendente. Mi sono sentita coccolata dall'inizio alla fine."</p>
+        <div class="review-author">Anna M.</div>
+        <div class="review-city">Milano</div>
+      </div>
+      <div class="review-card reveal" style="transition-delay:.1s">
+        <div class="review-top">
+          <div class="review-stars">★★★★★</div>
+          <div class="review-date">1 mese fa</div>
+        </div>
+        <p class="review-text">"Finalmente ho trovato il posto giusto! Manicure perfetta, ambiente curatissimo e un'attenzione al cliente davvero rara. Ci torno ogni mese senza pensarci due volte."</p>
+        <div class="review-author">Giulia P.</div>
+        <div class="review-city">Milano</div>
+      </div>
+      <div class="review-card reveal" style="transition-delay:.2s">
+        <div class="review-top">
+          <div class="review-stars">★★★★★</div>
+          <div class="review-date">2 mesi fa</div>
+        </div>
+        <p class="review-text">"Ho provato il massaggio decontratturante ed è stato incredibile. Personale preparatissimo che sa davvero ascoltare. Prezzi onesti per una qualità altissima. Consigliatissimo!"</p>
+        <div class="review-author">Sara L.</div>
+        <div class="review-city">Milano</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTATTI -->
+<section class="section contacts" id="contatti">
+  <div class="container contacts-inner">
+    <div class="contacts-left">
+      <div class="tag reveal">Vieni a trovarci</div>
+      <h2 class="h2 reveal">Prenota il tuo<br><em>momento</em></h2>
+      <p class="sub reveal" style="margin-top:12px;margin-bottom:32px">Siamo qui per te. Prenota telefonicamente o su WhatsApp — risponderemo in poche ore.</p>
+      <div class="contact-list">
+        <div class="contact-item reveal">
+          <div class="contact-icon">📞</div>
+          <div>
+            <div class="contact-label">Telefono</div>
+            <div class="contact-value"><a href="tel:3295888800">329 588 8800</a></div>
+          </div>
+        </div>
+        <div class="contact-item reveal" style="transition-delay:.06s">
+          <div class="contact-icon">💬</div>
+          <div>
+            <div class="contact-label">WhatsApp</div>
+            <div class="contact-value"><a href="https://wa.me/393295888800" target="_blank">Scrivici ora →</a></div>
+          </div>
+        </div>
+        <div class="contact-item reveal" style="transition-delay:.12s">
+          <div class="contact-icon">📍</div>
+          <div>
+            <div class="contact-label">Indirizzo</div>
+            <div class="contact-value soft">Via Giulio e Corrado Venini, 64, 20127 Milano MI, Italia</div>
+          </div>
+        </div>
+        <div class="contact-item reveal" style="transition-delay:.18s">
+          <div class="contact-icon">🕐</div>
+          <div>
+            <div class="contact-label">Orari</div>
+            <div class="contact-value soft">Lun-Ven: 8:00-18:30 | Sab: 8:30-13:00</div>
+          </div>
+        </div>
+      </div>
+      <div class="contacts-cta reveal">
+        <a href="tel:3295888800" class="btn btn-gold">📞 Prenota il tuo trattamento</a>
+      </div>
+    </div>
+    <div class="contacts-map reveal" style="transition-delay:.2s">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d89414!2d9.1859243!3d45.4654219!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c1493f1275e7%3A0x3cffcd13c6740e8d!2sMilano!5e0!3m2!1sit!2sit!4v1234567890" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo"><em>Milan Hair Style</em></div>
+        <p class="footer-desc">Parrucchiere professionale a Milano. Trattamenti viso, corpo e benessere in un ambiente esclusivo.</p>
+      </div>
+      <div>
+        <div class="footer-heading">Contatti</div>
+        <div class="footer-links">
+          <a href="tel:3295888800">📞 329 588 8800</a>
+          <a href="https://wa.me/393295888800" target="_blank">💬 WhatsApp</a>
+          <a>📍 Via Giulio e Corrado Venini, 64, 20127 Milano MI, Italia</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-heading">Trattamenti</div>
+        <div class="footer-links">
+          <a href="#servizi">Viso</a>
+          <a href="#servizi">Massaggi</a>
+          <a href="#servizi">Manicure</a>
+          <a href="#servizi">Epilazione</a>
+          <a href="#servizi">Corpo</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2025 Milan Hair Style. Tutti i diritti riservati.</div>
+      <div class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Cookie Policy</a></div>
+    </div>
+  </div>
+</footer>
+
+<!-- MOBILE BAR -->
+<div class="mobile-bar">
+  <a href="tel:3295888800" class="mobile-bar-call">📞 Prenota</a>
+  <a href="https://wa.me/393295888800" target="_blank" class="mobile-bar-wa">💬 WhatsApp</a>
+</div>
+
+<!-- COOKIE -->
+<div class="cookie" id="cookie">
+  <span>Utilizziamo cookie tecnici per migliorare la navigazione. <a href="#" style="color:var(--gold-mid)">Scopri di più</a></span>
+  <button class="cookie-btn" onclick="acceptCookie()">Accetta</button>
+</div>
+
+<script>
+const nav = document.getElementById('nav')
+window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 20))
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible') })
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' })
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el))
+
+function acceptCookie() {
+  localStorage.setItem('cookie_ok','1')
+  document.getElementById('cookie').classList.remove('show')
+}
+window.addEventListener('load', () => {
+  if(!localStorage.getItem('cookie_ok'))
+    setTimeout(() => document.getElementById('cookie').classList.add('show'), 1500)
+})
+
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const t = document.querySelector(a.getAttribute('href'))
+    if(t){ e.preventDefault(); t.scrollIntoView({behavior:'smooth'}) }
+  })
+})
+</script>
+</body>
+</html>
